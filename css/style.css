@@ -415,6 +415,11 @@ body {
 
 }
 
+img {
+  width: 100%; /* никогда не превышает размер контейнера */
+  height: auto; /* всегда сжимается по высоте */
+}
+
 .wrapper {
   max-width: 1060px;
   margin: 0 auto;
@@ -533,9 +538,103 @@ body {
 /*** Main intro styles end ***/
 
 
+/*** Main benifits styles begin ***/
+.benifits {
+  margin-bottom: 131px;
+}
+
+.benifits__wrap {
+  max-width: 1262px;
+  background: white;
+  margin: 0 auto;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  position: relative;
+}
+
+.benifits__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 57px;
+  padding: 0 100px;
+
+}
+
+.benifits__title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  padding: 93px 100px 88px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background: inherit;
+
+}
+
+.benifits__card {
+  grid-column: span 1;
+  margin-bottom: 112px;
+
+}
+
+.benifits__card-pic {
+  max-width: 66px;
+  margin-bottom: 37px;
+}
+
+.benifits__card-thumb {
+  display: block; /* чтобы урать margin-bottom (см. часть 4 19:07 */
+}
+
+.benifits__card-title{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+  margin-bottom: 26px;
+
+}
+
+.benifits__card-desc {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 39px;
+}
+
+.benifits__card-more {
+  font-size: 16px;
+  line-height: 24px;  
+  color: #006DFE;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  background: url(../img/svg/ben-arrow-right-icon.svg) no-repeat 95% center;
+  padding-right: 59px;
+  transition: .2s all;
+}
+
+.benifits__card-more:hover, .benifits__card-more:focus {
+  background: url(../img/svg/ben-arrow-right-icon.svg) no-repeat right center;
+}
+
+/*** Main benifits styles end ***/
+
 
 
 /************************************** D E L E T E **********/
+
+/* .benifits__card {
+  border: 1px solid;
+} */
+
+/* .benifits__cards {
+  padding-left: 100px;
+  padding-right: 100px;
+} */
+
+
 /* header {
   background-color: black;
 }
@@ -544,6 +643,13 @@ body {
   background-color: gray;
 } */
 
+/* .benifits__title {
+  background-color: rgb(36, 35, 35);
+  color: white;
+}
 
+.benifits__wrap{
+  background-color: gray;
 
+} */
 
