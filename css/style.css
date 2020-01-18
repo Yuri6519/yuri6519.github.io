@@ -720,7 +720,8 @@ img {
 .places__cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
 
 .places__card_size-lg {
@@ -797,8 +798,7 @@ img {
 .tours_tour {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-gap: 0 61px; */
-  grid-gap: 0 108px;
+  grid-column-gap: 108px;
   align-items: center;
   margin-bottom: 77px;
 }
@@ -849,14 +849,16 @@ img {
 
 .top__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 57px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 57px;
+  grid-row-gap: 57px;
 }  
 
 /*чтобы при большом контенте кнопки были OK (смм. ниже)*/
 .top__card {
   display: flex;
   flex-direction: column;
+  grid-column: span 2;
 }
 
 .top__card-pic {
@@ -1008,11 +1010,95 @@ img {
 
 
 /*** Media start ***/
+@media screen and (max-width: 960px) {
+  .search-form__field {
+    margin-bottom: 25px;
+  }
+
+  .search-form__submit {
+    max-height: 58px;; /** my one**/
+  }
+
+  .benifits {
+    margin-bottom: 60px;
+  }
+
+  .benifits__cards {
+    padding: 0 15px;
+    grid-column-gap: 35px;
+  }
+
+  .benifits__title {
+    padding: 55px 15px;
+  }
+
+  .benifits__wrap{
+    box-shadow: none;
+  }
+
+  .benifits__card {
+    margin-bottom: 50px;
+  }
+
+  .places__card_size-lg {
+    grid-column: span 6;
+  }
+
+  .places__card_size-sm {
+    grid-column: span 6;
+  }
+
+  .tour__info {
+    padding-left: 0px;
+  }
+
+  .tours_tour {
+    grid-column-gap: 35px;
+  }
+
+  .tour__title {
+    margin-bottom: 15px;
+  }
+
+  .tour__desc {
+    margin-bottom: 15px;
+  }  
+
+  .top__cards {
+    grid-column-gap: 25px;
+    grid-row-gap: 55px;
+  }
+
+  .top__card {
+    grid-column: span 3;
+  }
+
+  .top__card-pic {
+    margin-bottom: 25px;
+  }
+
+  .footer {
+    padding: 60px 0;
+  }
+  
+}
 
 @media screen and (max-width: 767px) {
+
+  .section-title {
+    margin-bottom: 25px;
+  }
+  .section-title::after {
+    width: 78px;
+  }
+
   .header__burger  {
     display: block;
     transition: .2s all linear;
+  }
+
+  .header__wrapper {
+    padding-top: 28px;
   }
 
   .header__nav {
@@ -1084,9 +1170,134 @@ img {
     transform: translateY(-50%) rotate(-45deg);
   }
 
+  .intro {
+    padding-top: 125px;
+  }
 
+  .intro__title{
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .intro__subtitle {
+    font-size: 14px;
+  }
+
+  .search-form__field {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 12px;
+    background: transparent url(../img/svg/circle-item.svg) no-repeat left 2px;
+  }
+
+  .search-form__field::placeholder {
+    font-size: 16px;
+  }
+  
+  .benifits {
+    margin-bottom: 36px;
+  }
+  
+  .benifits__card {
+    grid-column: span 3;
+    margin-bottom: 40px;
+  }
+
+  .benifits__card-pic {
+    margin-bottom: 20px;
+  }
+
+  .benifits__card-title {
+    margin-bottom: 12px;
+  }
+
+  .benifits__card-desc {
+    margin-bottom: 20px;
+  }
+
+  .places__card-pic_lg, .places__card-pic_sm {
+    height: 230px;
+  }
+
+  .places {
+    margin-bottom: 76px;
+  }
+
+  /*** for landscape version ***/
+  .places_view-all {
+    margin-bottom: 25px;
+  }
+
+  /*** for landscape version ***/
+  .places__caption {
+    margin-bottom: 0;
+  }
+
+  .tour__info, .tour__pic {
+    grid-column: span 2;
+  }
+
+  .tour__pic {
+    margin-bottom: 12px;
+  }
+  
+  /** Это мое решение. В оригинале просто добавлен еще один класс к этому .tour__pic*/
+  .tours .tour:last-child > .tour__pic {
+    grid-row-start: 1;
+  }
+
+  .tours {
+    margin-bottom: 76px;
+  }
+
+  .tours_tour {
+    margin-bottom: 50px;
+  }
+
+  .top {
+    margin-bottom: 76px;
+  }  
+
+  .top__card {
+    grid-column: span 6;
+  }
+
+  /*** for landscape version ***/
+  .top__card-stats {
+    max-width: 386px;
+  }
+
+  .top__card-desc {
+    margin-bottom: 16px;
+  }
+
+  .footer__logo {
+    widows: 100%;
+    margin-bottom: 24px;
+  }
+
+  .footer__nav {
+    width: 100%;
+  }
+
+  .footer__menu {
+    flex-basis: 50%;
+    width: 50%;
+    margin-bottom: 24px;
+  }
+  
 }
 
+@media screen and (max-width: 500px) {
+  .header__nav {
+    padding: 75px 30px;
+  }
+
+  .search-form__submit {
+    width: 100%;
+  }
+
+}
 
 
 /*** Media end ***/

@@ -1,2 +1,1 @@
-# yuri6519.github.io
-верстка travel (css lab)
+верстка сайта из макета Figma (css Lab)
